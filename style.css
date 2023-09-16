@@ -1,0 +1,59 @@
+/* Add your custom styles here */
+body{
+    background-color: #79674f;
+    color: #ede6d2;
+}
+.container {
+    max-width: 900px; /* Adjust the width as needed */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Create space between columns */
+    counter-reset: my-counter; /* Reset the counter for each column */
+}
+
+.column {
+    width: 48%; /* Adjust column width as needed */
+}
+
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat Alternates';
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    
+}
+
+li::before {
+    content: counter(my-counter); /* Add the manually generated number *//* Increment the counter */
+    margin-right: 5px; /* Add spacing between the number and content */
+    width: 20px; /* Fixed width for consistent alignment */
+    text-align: right; /* Right-align the numbers */
+    display: inline-block; /* Ensure consistent spacing */
+
+}
+
+li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    max-width: 100%; /* Ensure the content doesn't exceed column width */
+}
+
+input[type="text"] {
+    margin-left: 10px;
+    font-family: 'Lora';
+    flex: 1; /* Allow text inputs to grow and fill available space */
+    padding: 5px;
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+
